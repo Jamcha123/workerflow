@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "home": "flags-99565",
+    "default": "flags-99565"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

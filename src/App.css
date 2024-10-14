@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.back{
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-image: radial-gradient(45deg, #7f0a91, #1fccc3, #b51259);
+    animation: value 10s ease-in-out infinite;
+}
+@keyframes value {
+    from, to{background-position: 0%;}
+    50%{background-position: 100%;}
+}
+@layer components{
+}
