@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+body{
+  overflow: hidden;
+}
+.back{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0;
+  z-index: -1;
+}
+.back, form{
+  background-image: linear-gradient(45deg, rgb(50, 50, 50), rgb(40, 40, 40), rgb(30, 30, 30), rgb(20, 20, 20), rgb(10, 10, 10));
+  background-size: 500%;
+  background-repeat: no-repeat;
+  background-position: 0%;
+}
+.back{
+  animation: value1 20s ease-in-out infinite;
+}
+form{
+  background-color: gray;
+}
+@keyframes value1{
+  from, to{background-position: 0%;}
+  50%{background-position: 100%;}
+}
+.container{
+  position: absolute;
+  width: 30em;
+  height: 11em;
+  margin: auto;
+  padding: 0;
+  border: transparent;
+  background-color: transparent;
+}
+.container, form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  perspective: 1000px;
+}
+.container, .back{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+form{
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  border: transparent;
+  z-index: -1;
+  scale: 0;
+  transition: all 1s;
+}
+form:nth-child(1){
+  scale: 1;
+}
+form:nth-child(2){
+  transform: translateY(-100%);
+}
+.item1{
+  width: 100%;
+  height: 2.5em;
+  margin: auto;
+  padding: 0;
+  position: relative;
+}
+.item1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.item2{
+  width: 25%;
+  height: 2.5em;
+  margin: auto;
+  padding: 0;
+  background-color: rgb(40, 40, 40);
+}
+input{
+  width: 75%;
+  height: 2.5em;
+  margin: auto;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+  font-family: 'Rethink Sans', sans-serif;
+  text-align: center;
+  background-color: rgb(30, 30, 30);
+  border: transparent;
+}
+input:hover{
+  z-index: 99;
+}
+input:nth-child(3){
+  cursor: pointer;
+  width: 100%;
+}
+button{
+  width: fit-content;
+  height: 2.5em;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  text-decoration-line: underline;
+  text-decoration: underline;
+  background-color: transparent;
+  font-family: 'Rethink Sans', sans-serif;
+  border: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
