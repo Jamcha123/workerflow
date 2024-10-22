@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bree+Serif&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 h1, button{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: "Archivo Narrow", sans-serif;
+    font-style: italic;
+    font-weight: 400;
 }
 .back{
     background-size: 300%;
@@ -14,9 +15,23 @@ h1, button{
     background-image: radial-gradient(45deg, #7f0a91, #1fccc3, #b51259);
     animation: value 10s ease-in-out infinite;
 }
+button{
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    animation: value 10s ease-in-out infinite;
+}
 @keyframes value {
     from, to{background-position: 0%;}
     50%{background-position: 100%;}
 }
 @layer components{
+    @keyframes toshadow {
+        from, to{@apply shadow-lg shadow-violet-600}
+        25%{@apply shadow-lg shadow-blue-600}
+        50%{@apply shadow-lg shadow-green-600}
+    }
+    button{
+        animation: toshadow 10s ease-in-out infinite;
+    }
 }
